@@ -106,3 +106,27 @@ git reset HEAD~3 :- reset the history latest last 3 commit
 git revert commitID :- revert the changes from remote 
 Internally It is revert the changes and commit the last changes in remote
 ============= merge /rebase ========================================
+
+
+
+
+git checkout filename :- discard the changes in working dir
+
+
+===========Modify commit message : without modify the dir/files : create new commitID========
+git commit -m "first commit"
+git commit --amend -m "initial commit"
+=============================
+
+===========modify the files in last commit message : create new commit id========
+touch .gitignore 
+git add .gitignore
+git commit --amend -m "initial commit"
+=============================
+
+
+===============take the changes from master into branch ========================
+git branch 
+git checkout feature
+git cherry-pick [commitID - master branch commitID]
+============================
