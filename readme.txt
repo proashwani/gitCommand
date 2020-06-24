@@ -71,3 +71,38 @@ git checkout <name-of-your-branch> := switch in branch and checking the updates
 2. branch should exist on local
  
 git checkout -b <name-of-your-branch> := create branch and switch into it
+
+
+============ checkout / reset /revert ===========
+
+
+git branch
+git status
+--- do some modification in 
+
+git status
+git checkout filename :- discard changes from working area
+git checkout . :- discard All changes from working area
+
+git add .
+git commit 
+git reset HEAD * :- Unstage all the files and come in working area
+git status
+
+ 
+if your commit not push then use the reset 
+RESET :- always work on the local history not remote
+remove latest commit
+git reset HEAD~1 :- move the changes to working area
+git reset --mixed HEAD~1 :-  default mixed move the changes to working area
+git reset --soft HEAD~1 :- move the changes to staging area
+git reset --hard Head~1 :- Move the changes to every where
+git reset HEAD~3 :- reset the history latest last 3 commit 
+1.  move the change from top and files send to working area
+2. 
+
+
+
+git revert commitID :- revert the changes from remote 
+Internally It is revert the changes and commit the last changes in remote
+============= merge /rebase ========================================
